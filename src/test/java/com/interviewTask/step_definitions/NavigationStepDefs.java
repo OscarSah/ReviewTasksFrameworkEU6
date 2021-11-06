@@ -17,9 +17,8 @@ public class NavigationStepDefs {
     }
 
     @When("User navigates to {string} in {string} category")
-    public void user_navigates_to_in_category(String string, String string2) {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+    public void user_navigates_to_in_category(String product, String category) {
+
     }
 
     @Then("User should be able to see {string} product")
