@@ -51,12 +51,12 @@ public class NavigationStepDefs {
     }
 
     @Then("User should be able to see all the products of that category")
-    public void user_should_be_able_to_see_all_the_products_of_that_category(List<String> dataTable) {
+    public void user_should_be_able_to_see_all_the_products_of_that_category(List<String> expectedListOfProducts) {
 
        BrowserUtils.waitFor(1);
 
-        System.out.println(BrowserUtils.getElementsText(homePage.products));
+       List<String> actualListOfProducts = BrowserUtils.getElementsText(homePage.products);
 
-
+        Assert.assertEquals(expectedListOfProducts,actualListOfProducts);
     }
 }
