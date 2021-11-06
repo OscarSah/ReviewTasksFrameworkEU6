@@ -5,6 +5,6 @@ import org.openqa.selenium.support.FindBy;
 
 public class ProductPage extends BasePage{
 
-@FindBy(xpath = "//h2")
+@FindBy(tagName = "h2")
 public WebElement product;
 }
