@@ -1,5 +1,7 @@
 package com.interviewTask.step_definitions;
 
+import com.interviewTask.utilities.ConfigurationReader;
+import com.interviewTask.utilities.Driver;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -7,8 +9,11 @@ import io.cucumber.java.en.When;
 public class NavigationStepDefs {
     @Given("User is on the Home Page")
     public void user_is_on_the_Home_Page() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+
+      //  String url = ConfigurationReader.get("url");
+
+        Driver.get().get(ConfigurationReader.get("url"));
+
     }
 
     @When("User navigates to {string} in {string} category")
