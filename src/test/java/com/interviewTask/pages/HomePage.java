@@ -3,6 +3,9 @@ package com.interviewTask.pages;
 import com.interviewTask.utilities.Driver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+
+import java.util.List;
 
 
 public class HomePage extends BasePage{
@@ -15,5 +18,8 @@ public WebElement getCategory(String category){
 public WebElement getProduct (String product){
     return Driver.get().findElement(By.linkText(product));
 }
+
+    @FindBy(xpath = "//a[@class='hrefch']")
+    public List<WebElement> products;
 
 }

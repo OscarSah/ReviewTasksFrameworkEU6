@@ -8,7 +8,6 @@ Feature: User navigates through product categories
     When User navigates to "Sony vaio i5" in "Laptops" category
     Then User should be able to see "Sony vaio i5" product
 
-  @wip
   Scenario Outline: User navigates to <Product>
     When User navigates to "<Product>" in "<category>" category
     Then User should be able to see "<expectedProduct>" product
@@ -18,3 +17,12 @@ Feature: User navigates through product categories
       | Laptops  | Sony vaio i5      | Sony vaio i5      |
       | Monitors | Apple monitor 24  | Apple monitor 24  |
       | Phones   | Samsung galaxy s6 | Samsung galaxy s6 |
+
+  @wip
+
+  Scenario: User should see all the products of Laptops Category
+    When User clicks on "Laptops" category
+    Then User should be able to see all the products of that category
+      | syhd   |
+      | kgkgf  |
+      | kgfkgk |

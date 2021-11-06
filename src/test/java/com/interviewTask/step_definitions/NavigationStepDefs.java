@@ -9,6 +9,8 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
 
+import java.util.List;
+
 public class NavigationStepDefs {
 
     HomePage homePage = new HomePage();
@@ -37,6 +39,20 @@ public class NavigationStepDefs {
 
         Assert.assertEquals("Product Name DO NOT Match", expectedProductName,actualProductName);
 
+
+    }
+
+    @When("User clicks on {string} category")
+    public void userClicksOnCategory(String category) {
+
+        homePage.getCategory(category).click();
+
+    }
+
+    @Then("User should be able to see all the products of that category")
+    public void user_should_be_able_to_see_all_the_products_of_that_category(List<String> dataTable) {
+
+        homePage.products
 
     }
 }
