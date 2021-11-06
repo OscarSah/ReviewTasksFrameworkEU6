@@ -2,6 +2,7 @@ package com.interviewTask.step_definitions;
 
 import com.interviewTask.pages.HomePage;
 import com.interviewTask.pages.ProductPage;
+import com.interviewTask.utilities.BrowserUtils;
 import com.interviewTask.utilities.ConfigurationReader;
 import com.interviewTask.utilities.Driver;
 import io.cucumber.java.en.Given;
@@ -52,7 +53,8 @@ public class NavigationStepDefs {
     @Then("User should be able to see all the products of that category")
     public void user_should_be_able_to_see_all_the_products_of_that_category(List<String> dataTable) {
 
-        homePage.products
+        System.out.println("BrowserUtils.getElementsText(homePage.products) = " + BrowserUtils.getElementsText(homePage.products));
+
 
     }
 }
