@@ -17,6 +17,8 @@ public class NavigationStepDefs {
     HomePage homePage = new HomePage();
     ProductPage productPage = new ProductPage();
 
+    public static String globalNameForProduct;
+
     @Given("User is on the Home Page")
     public void user_is_on_the_Home_Page() {
 
@@ -30,6 +32,7 @@ public class NavigationStepDefs {
     public void user_navigates_to_in_category(String product, String category) {
         homePage.getCategory(category).click();
         homePage.getProduct(product).click();
+        globalNameForProduct = product;
 
     }
 

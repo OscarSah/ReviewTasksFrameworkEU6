@@ -19,6 +19,10 @@ public WebElement getProduct (String product){
     return Driver.get().findElement(By.linkText(product));
 }
 
+public WebElement getLink(String linkName){
+    return Driver.get().findElement(By.partialLinkText(linkName));
+}
+
     @FindBy(xpath = "//a[@class='hrefch']")
     public List<WebElement> products;
 
