@@ -23,6 +23,9 @@ Feature: User navigates through product categories
   Scenario: User should see all the products of Laptops Category
     When User clicks on "Laptops" category
     Then User should be able to see all the products of that category
-      | syhd   |
-      | kgkgf  |
-      | kgfkgk |
+      | Sony vaio i5        |
+      | Sony vaio i7        |
+      | MacBook air         |
+      | Dell i7 8gb         |
+      | 2017 Dell 15.6 Inch |
+      | MacBook Pro         |
