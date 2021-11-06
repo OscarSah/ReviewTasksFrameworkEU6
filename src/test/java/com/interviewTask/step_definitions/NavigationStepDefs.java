@@ -35,7 +35,7 @@ public class NavigationStepDefs {
 
         String actualProductName = productPage.product.getText();
 
-        Assert.assertEquals(expectedProductName,actualProductName,"Product Name DO NOT Match");
+        Assert.assertEquals("Product Name DO NOT Match", expectedProductName,actualProductName);
 
 
     }
