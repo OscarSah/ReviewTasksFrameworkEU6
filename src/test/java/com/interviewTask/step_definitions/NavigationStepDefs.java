@@ -1,15 +1,18 @@
 package com.interviewTask.step_definitions;
 
 import com.interviewTask.pages.HomePage;
+import com.interviewTask.pages.ProductPage;
 import com.interviewTask.utilities.ConfigurationReader;
 import com.interviewTask.utilities.Driver;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.junit.Assert;
 
 public class NavigationStepDefs {
 
     HomePage homePage = new HomePage();
+    ProductPage productPage = new ProductPage();
 
     @Given("User is on the Home Page")
     public void user_is_on_the_Home_Page() {
@@ -28,8 +31,12 @@ public class NavigationStepDefs {
     }
 
     @Then("User should be able to see {string} product")
-    public void user_should_be_able_to_see_product(String string) {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+    public void user_should_be_able_to_see_product(String expectedProductName) {
+
+        String actualProductName = productPage.product.getText();
+
+        Assert.assertEquals(expectedProductName,actualProductName,"Product Name DO NOT Match");
+
+
     }
 }
