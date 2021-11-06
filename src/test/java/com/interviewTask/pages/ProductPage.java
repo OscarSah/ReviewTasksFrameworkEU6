@@ -7,4 +7,8 @@ public class ProductPage extends BasePage{
 
 @FindBy(tagName = "h2")
 public WebElement product;
+
+@FindBy(linkText = "Add to cart")
+    public WebElement addButton;
+
 }

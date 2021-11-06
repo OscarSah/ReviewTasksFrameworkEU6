@@ -1,3 +1,4 @@
+@smoke
 Feature: User navigates through product categories
   Agile Story: As a user, I should be able to navigate through different product categories
 
@@ -8,6 +9,7 @@ Feature: User navigates through product categories
     When User navigates to "Sony vaio i5" in "Laptops" category
     Then User should be able to see "Sony vaio i5" product
 
+  @datadriven
   Scenario Outline: User navigates to <Product>
     When User navigates to "<Product>" in "<category>" category
     Then User should be able to see "<expectedProduct>" product
@@ -18,7 +20,7 @@ Feature: User navigates through product categories
       | Monitors | Apple monitor 24  | Apple monitor 24  |
       | Phones   | Samsung galaxy s6 | Samsung galaxy s6 |
 
-  @wip
+
 
   Scenario: User should see all the products of Laptops Category
     When User clicks on "Laptops" category
