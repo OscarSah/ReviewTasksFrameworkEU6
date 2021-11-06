@@ -9,12 +9,12 @@ Feature: User navigates through product categories
     Then User should be able to see "Sony vaio i5" product
 
   @wip
-  Scenario Outline: User navigates to <expectedProduct>
-    When User navigates to "<expectedProduct>" in "<category>" category
-    Then User should be able to see "<actualProduct>" product
+  Scenario Outline: User navigates to <Product>
+    When User navigates to "<Product>" in "<category>" category
+    Then User should be able to see "<expectedProduct>" product
 
     Examples:
-      | category | expectedProduct   | actualProduct     |
+      | category | expectedProduct   | Product           |
       | Laptops  | Sony vaio i5      | Sony vaio i5      |
       | Monitors | Apple monitor 24  | Apple monitor 24  |
       | Phones   | Samsung galaxy s6 | Samsung galaxy s6 |
