@@ -1,3 +1,4 @@
+@wip
 Feature: User navigates through product categories
   Agile Story: As a user, I should be able to navigate through different product categories
 
